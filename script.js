@@ -147,3 +147,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+document.getElementById('applyOnlineBtn').addEventListener('click', function() {
+    const formSection = document.getElementById('applicationFormSection');
+    if (formSection.classList.contains('hidden')) {
+        formSection.classList.remove('hidden');
+    }
+    window.scrollTo({
+        top: formSection.offsetTop - 80,
+        behavior: 'smooth'
+    });
+});
+
+// Add handler for the main admissions section button (formerly Google Forms link)
+const applyOnlineNowMain = document.getElementById('applyOnlineNowMain');
+if (applyOnlineNowMain) {
+    applyOnlineNowMain.addEventListener('click', function() {
+        const formSection = document.getElementById('applicationFormSection');
+        if (formSection.classList.contains('hidden')) {
+            formSection.classList.remove('hidden');
+        }
+        window.scrollTo({
+            top: formSection.offsetTop - 80,
+            behavior: 'smooth'
+        });
+    });
+}
