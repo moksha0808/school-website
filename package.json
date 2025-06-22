@@ -27,6 +27,7 @@
     "vite": "^6.3.5"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.0.1",
     "pg": "^8.16.2"
   }
 }
