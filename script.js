@@ -159,18 +159,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Add handler for the main admissions section button (formerly Google Forms link)
+    // Apply Online Now button in admissions section should scroll to the contact section's Apply Online Now button
     const applyOnlineNowMain = document.getElementById('applyOnlineNowMain');
     if (applyOnlineNowMain) {
         applyOnlineNowMain.addEventListener('click', function() {
-            const formSection = document.getElementById('applicationFormSection');
-            if (formSection.classList.contains('hidden')) {
-                formSection.classList.remove('hidden');
+            // Scroll to the contact section's Apply Online Now button
+            const contactApplyBtn = document.getElementById('applyOnlineBtn');
+            if (contactApplyBtn) {
+                contactApplyBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                contactApplyBtn.focus();
             }
-            window.scrollTo({
-                top: formSection.offsetTop - 80,
-                behavior: 'smooth'
-            });
         });
     }
 });
